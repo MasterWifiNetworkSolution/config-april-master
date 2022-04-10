@@ -1,1 +1,9 @@
-
+proxies:
+- name: isi-nama-akun
+  type: trojan
+  server: id1-masterwifinetworksolution.net
+  port: 443
+  password: 123456-1234-1234-1234-123456789
+  udp: true
+  sni: isibug.disini
+  skip-cert-verify: true
