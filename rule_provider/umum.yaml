@@ -1,1 +1,15 @@
+payload:
 
+  # > semua umum tanpa direct udah saya buat di config
+  # > jika ada rule sendiri bisa di tembahkan disini
+
+  # > khusus speedtest
+  - '+.starhub.com'
+  - '+.iconpln.net.id'
+  - '+.indosat.com'
+  - '+.fast.net.id'
+  - '+.facificinternet.com'
+  - '+.xl.co.id'
+  - '+.telkomsel.co.id'
+  - '+.speedtest.net'
+  - '+.cbn.id' 

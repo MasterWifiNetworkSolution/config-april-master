@@ -1,0 +1,5 @@
+payload:
+
+  # > semua stream direct udah saya buat di config
+  # > jika ada rule sendiri bisa di tembahkan disini
+  - '+.streammaster.com'

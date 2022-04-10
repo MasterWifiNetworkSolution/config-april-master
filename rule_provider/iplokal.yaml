@@ -1,0 +1,7 @@
+payload:
+
+  # > isikan ip masing masing yang terhubung
+  # > ke openwrt mulai ip stb dan modem juga AP
+  - IP-CIDR,0.0.0.0/0
+  - IP-CIDR,192.168.1.0/24
+  - IP-CIDR,192.168.8.0/24
