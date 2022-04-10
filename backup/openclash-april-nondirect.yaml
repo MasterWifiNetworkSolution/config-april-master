@@ -1,0 +1,355 @@
+---
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 7893
+allow-lan: true
+mode: script
+log-level: info
+ipv6: false
+external-controller: 0.0.0.0:9090
+external-ui: "/usr/share/openclash/dashboard"
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  default-nameserver:
+  - 114.114.114.114
+  - 119.29.29.29
+  - 9.9.9.9
+  - 8.8.8.8
+  - 8.8.4.4
+  - 1.1.1.1
+  - 1.0.0.1
+  - 192.168.8.1
+  nameserver:
+  - 192.168.8.1
+  - dhcp://"eth1"
+  - 8.8.8.8
+  - 8.8.4.4
+  - https://dns.adguard.com/dns-query
+  - https://dns.google/dns-query
+  - tls://dns.adguard.com
+  - tls://dns.google
+  fallback:
+  - https://cloudflare-dns.com/dns-query
+  - https://dns.google/dns-query
+  - https://1.1.1.1/dns-query
+  - tls://8.8.8.8:853
+  - tls://dns.rubyfish.cn:853
+  - https://1.1.1.1/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
+    - 240.0.0.0/4
+    - 255.255.255.255/32
+    domain:
+    - "+.google.com"
+    - "+.google.co.id"
+    - "+.yahoo.com"
+    - "+.yahoo.co.id"
+    - "+.bing.com"
+    - "+.yandex.com"
+    - "+.apple.com"
+    - "+.konami.com"
+    - "+.garena.com"
+    - "+.garena.co.id"
+    - "+.garena.sg"
+    - "+.dota2.com"
+    - "+.mobilelegends.com"
+    - "+.pubgmobile.com"
+    - "+.krafton.com"
+    - "+.roblox.com"
+    - "+.facebook.com"
+    - "+.fbcdn.net"
+    - "+.instagram.com"
+    - "+.tiktok.com"
+    - "+.tiktokv.com"
+    - "+.tiktokcdn.com"
+    - "+.musical.ly"
+    - "+.twitter.com"
+    - "+.twimg.com"
+    - "+.whatsapp.com"
+    - "+.whatsapp.net"
+    - "+.youtube.com"
+    - "+.ytimg.com"
+    - "+.googlevideo.com"
+    - "+.netflix.com"
+    - "+.hbo.go"
+    - "+.hotstar.com"
+    - "+.disney.com"
+    - "+.speedtest.net"
+    - "+.cbn.id"
+    - "+.fast.com"
+    - "+.xl.co.id"
+    - "+.telkomsel.co.id"
+    - "+.indosat.co.id"
+    - "+.indosat.com"
+    - "+.axis.net"
+    - "+.githubusercontent.com"
+  fake-ip-filter:
+  - "*.lan"
+  - time.windows.com
+  - time.nist.gov
+  - time.apple.com
+  - time.asia.apple.com
+  - "*.ntp.org.cn"
+  - "*.openwrt.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - time.ustc.edu.cn
+  - pool.ntp.org
+  - ntp.ubuntu.com
+  - ntp.aliyun.com
+  - ntp1.aliyun.com
+  - ntp2.aliyun.com
+  - ntp3.aliyun.com
+  - ntp4.aliyun.com
+  - ntp5.aliyun.com
+  - ntp6.aliyun.com
+  - ntp7.aliyun.com
+  - time1.aliyun.com
+  - time2.aliyun.com
+  - time3.aliyun.com
+  - time4.aliyun.com
+  - time5.aliyun.com
+  - time6.aliyun.com
+  - time7.aliyun.com
+  - "*.time.edu.cn"
+  - time1.apple.com
+  - time2.apple.com
+  - time3.apple.com
+  - time4.apple.com
+  - time5.apple.com
+  - time6.apple.com
+  - time7.apple.com
+  - time1.google.com
+  - time2.google.com
+  - time3.google.com
+  - time4.google.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - localhost.ptlogin2.qq.com
+  - "+.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.microsoft.com
+  - "+.xboxlive.com"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "+.battlenet.com.cn"
+  - "+.media.dssott.com"
+  - "*.mcdn.bilivideo.cn"
+  - ff.dorado.sdo.com
+  - "*.ff14.sdo.com"
+  - "*.ffxiv.com"
+  - "*.finalfantasyxiv.com"
+  - "*.square-enix.com"
+  - "+.nflxvideo.net"
+  - stun.l.google.com
+  - lens.l.google.com
+  - swdist.apple.com
+  - swcdn.apple.com
+  - swdownload.apple.com
+  - swquery.apple.com
+  - swscan.apple.com
+  - mesu.apple.com
+  - "*.router.asus.com"
+  - "+.stun.*.*.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*"
+  - "+.wargaming.net"
+  - "+.wowsgame.cn"
+  - "+.wggames.cn"
+  - "+.wotgame.cn"
+  - xnotify.xboxlive.com
+  - "*.*.xboxlive.com"
+  - xbox.*.*.microsoft.com
+  - "*.n.n.srv.nintendo.net"
+  - localhost.sec.qq.com
+  - msftncsi.com
+  - msftconnecttest.com
+  - "+.msftncsi.com"
+  - "+.msftconnecttest.com"
+  - "+.pool.ntp.org"
+  - ntp7.*.com
+  - ntp6.*.com
+  - ntp5.*.com
+  - ntp4.*.com
+  - ntp3.*.com
+  - ntp2.*.com
+  - ntp1.*.com
+  - ntp.*.com
+  - time7.*.com
+  - time6.*.com
+  - time5.*.com
+  - time4.*.com
+  - time3.*.com
+  - time2.*.com
+  - time1.*.com
+  - time.*.apple.com
+  - time.*.edu.cn
+  - time.*.gov
+  - time.*.com
+  - "*.home.arpa"
+  - "*.local"
+  - "*.test"
+  - "*.localhost"
+  - "*.invalid"
+  - "*.example"
+  - "*.localdomain"
+  fake-ip-range: 198.18.0.1/16
+proxy-providers:
+  accountmaster:
+    type: file
+    path: "./proxy_provider/accountmaster.yaml"
+    health-check:
+      enable: true
+      interval: 99
+      lazy: true
+      url: http://www.gstatic.com/generate_204
+proxy-groups:
+- name: arahkankevpn
+  type: fallback
+  tolerance: 99
+  use:
+  - accountmaster
+- name: arahkankedirect
+  type: select
+  proxies:
+  - DIRECT
+- name: arahkankereject
+  type: select
+  proxies:
+  - REJECT
+rule-providers:
+  Blocked:
+    type: file
+    behavior: classical
+    path: "./rule_provider/blocked.yaml"
+  Umum:
+    type: file
+    behavior: domain
+    path: "./rule_provider/umum.yaml"
+  Umumdirect:
+    type: file
+    behavior: domain
+    path: "./rule_provider/umumdirect.yaml"
+  Gamemaster:
+    type: file
+    behavior: domain
+    path: "./rule_provider/gamemaster.yaml"
+  Gamedirect:
+    type: file
+    behavior: domain
+    path: "./rule_provider/gamedirect.yaml"
+  Sosmedmaster:
+    type: file
+    behavior: domain
+    path: "./rule_provider/sosmedmaster.yaml"
+  Sosmeddirect:
+    type: file
+    behavior: domain
+    path: "./rule_provider/sosmeddirect.yaml"
+  Streammaster:
+    type: file
+    behavior: domain
+    path: "./rule_provider/streammaster.yaml"
+  Streamdirect:
+    type: file
+    behavior: domain
+    path: "./rule_provider/streamdirect.yaml"
+  Iplokal:
+    type: file
+    behavior: classical
+    path: "./rule_provider/iplokal.yaml"
+script:
+  code: "def main(ctx, metadata):\n    ruleset_action = {\"Blocked\": \"arahkankereject\",\n
+    \       \"Iplokal\": \"arahkankevpn\",\n        \"Umum\": \"arahkankevpn\",\n
+    \       \"Gamemaster\": \"arahkankevpn\",\n        \"Sosmedmaster\": \"arahkankevpn\",\n
+    \       \"Streammaster\": \"arahkankevpn\",\n        \"Gamedirect\": \"arahkankedirect\",\n
+    \       \"Sosmeddirect\": \"arahkankedirect\",\n        \"Streamdirect\": \"arahkankedirect\",\n
+    \       \"Umumdirect\": \"arahkankedirect\",\n      }\n\n    port = int(metadata[\"dst_port\"])\n\n
+    \   if metadata[\"network\"] == \"UDP\":\n        if port == \"21,22,23,53,80,81,443,853,5353,8000,8008,8080,8081,8090,8443,8888\":\n
+    \           ctx.log('[Script] matched QUIC traffic use arahkankevpn')\n            return
+    \"arahkankevpn\"\n\n    if metadata[\"dst_ip\"] == \"198.18.6.200,198.18.6.195,198.18.6.201,54.248.105.235,52.37.82.128,52.25.126.240,35.82.114.253,54.68.233.229,44.238.107.112,54.189.186.221,52.40.167.65,54.149.78.230,35.174.175.11,18.179.74.81,52.208.162.2,52.196.4.126,34.193.147.150,34.193.147.150,52.208.162.2,18.179.74.81\":\n
+    \       metadata[\"dst_ip\"] = ctx.resolve_ip(metadata[\"host\"])\n        \n
+    \   port_list = [21, 22, 23, 53, 80, 123, 143, 194, 443, 465, 587, 853, 993, 995,
+    998, 2052, 2053, 2082, 2083, 2086, 2095, 2096, 5223, 3478, 5228, 5229, 5230, 5242,
+    8080, 8443, 8880, 8888, 8889, 17000, 20030, 20031, 20443, 39701, 49152, 50318,
+    50473, 50458, 50460, 50457, 50432, 50455, 50471, 50473, 50456, 59234]\n    if
+    port not in port_list:\n        ctx.log('[Script] not common port use arahkankevpn')\n
+    \       return \"arahkankevpn\"\n\n    if metadata[\"dst_ip\"] == \"198.18.6.196,198.18.6.199,198.18.6.198,198.18.6.203,198.18.6.191\":\n
+    \       return \"arahkankevpn\"\n\n    for ruleset in ruleset_action:\n        if
+    ctx.rule_providers[ruleset].match(metadata):\n            return ruleset_action[ruleset]\n\n
+    \   code = ctx.geoip(metadata[\"dst_ip\"])\n    if code == \"ID\":\n        ctx.log('[Script]
+    Geoip ID')\n        return \"arahkankevpn\"\n\n    ctx.log('[Script] APRILMASTER')\n
+    \   return \"arahkankevpn\"\n"
+rules:
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,Blocked,arahkankereject
+- RULE-SET,Iplokal,arahkankevpn
+- RULE-SET,Gamemaster,arahkankevpn
+- RULE-SET,Sosmedmaster,arahkankevpn
+- RULE-SET,Streammaster,arahkankevpn
+- RULE-SET,Gamedirect,arahkankedirect
+- RULE-SET,Sosmeddirect,arahkankedirect
+- RULE-SET,Streamdirect,arahkankedirect
+- RULE-SET,Umum,arahkankevpn
+- RULE-SET,Umumdirect,arahkankedirect
+- GEOIP,ID,arahkankevpn
+- MATCH,arahkankevpn
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+  - tcp://8.8.8.8:53
+  - tcp://8.8.4.4:53
+profile:
+  store-selected: true
+  store-fake-ip: true
+experimental:
+  interface-name: en0
+secret: '123456'
+bind-address: "*"
