@@ -1,5 +1,24 @@
 # config-april-master
-# Tata cara penggunaan ada disini
+# Tata cara mengisi dan penggunaan config april master
+
+# cara mengisi script april master ke openclash
+# # langsung dari openclash
+1. silahkan masuk openclash
+2. masuk ke menu config editor
+3. tekan menu upload dan isikan file openclash-april-master.yaml dan openclash-april-nondirect.yaml
+4. masuk ke folder backup dan folder config dan isikan juga file openclash-april-master.yaml dan openclash-april-nondirect.yaml
+5. masuk ke folder proxy_provider dan isikan file accounaster.yaml
+6. masuk ke rule_provider dan isikan semua yang ada dalam folder tersebut
+
+# # melalui winscp
+1. silahkan login ke winscp
+2. masuk ke folder etc lalu folder openclash
+3. silahkan drag n drop semua file dan folder yamg sudah anda download terkecuali Readme.MD
+
+# # melalui aplikasi Admin Hands apk
+1. silahkan login ke admin hands
+2. masuk ke folder etc lalu folder openclash
+3. silahkan upload folder semua yang sudah anda download
 
 # A.mengisi accountmaster.yaml
 1. silahkan masuk ke https://howdy.id/trojan-vpn/ untuk membuat akun trojan terlebih dahulu
