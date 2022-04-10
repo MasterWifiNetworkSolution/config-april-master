@@ -305,7 +305,7 @@ rule-providers:
     behavior: classical
     path: "./rule_provider/iplokal.yaml"
 script:
-  code: "def main(ctx, metadata):\n    ruleset_action = {\"Blocked\": \"arahkankereject\",\n
+  code: "def main(ctx, metadata):\n    ruleset_action = {\"Blocked\": \"arahkankevpn\",\n
     \       \"Iplokal\": \"arahkankevpn\",\n        \"Umum\": \"arahkankevpn\",\n
     \       \"Gamemaster\": \"arahkankevpn\",\n        \"Sosmedmaster\": \"arahkankevpn\",\n
     \       \"Streammaster\": \"arahkankevpn\",\n        \"Gamedirect\": \"arahkankedirect\",\n
@@ -328,7 +328,7 @@ script:
     \   return \"arahkankevpn\"\n"
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- RULE-SET,Blocked,arahkankereject
+- RULE-SET,Blocked,arahkankevpn
 - RULE-SET,Iplokal,arahkankevpn
 - RULE-SET,Gamemaster,arahkankevpn
 - RULE-SET,Sosmedmaster,arahkankevpn
